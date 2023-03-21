@@ -1,0 +1,52 @@
+@import 'colors';
+
+nav{
+  z-index:10;
+  position:sticky;
+  width: 100%;
+  top: 0;
+    background-color: $secondary;
+    display: flex;
+    justify-content: space-between  ;
+    padding: 0.7rem 2rem;
+>div{
+    >h2{
+        margin-left: -20px;
+        color: $primary ;
+    }
+
+    >img{
+      width: 90px;
+      height: 30px;
+      object-fit: cover;
+      margin-left: -25px;
+    }
+  }
+    >div{
+        display: flex;
+        align-items: center;
+
+        >a{
+          color: $primary;
+          font-size: 1.2rem;
+          margin: 0 1rem;
+          transition: all 0.3s;
+          &:hover{
+            filter: invert(1);
+          }
+
+          >p{
+            position: absolute;
+            background-color: $tertiary;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            font: 900 0.7rem 'Roboto';
+            display: grid;
+            place-items: center;
+            transform: translate(80%,-80%);
+          }
+
+        }
+    }
+}

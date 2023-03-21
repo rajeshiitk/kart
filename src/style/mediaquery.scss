@@ -1,0 +1,33 @@
+@media screen and (max-width:820px) {
+
+    .cart {
+        grid-template-columns: 1fr;
+
+        // >main{
+        //     overflow-y: inherit;
+        // }
+
+        >aside {
+            padding: 2rem;
+            border-radius: 0;
+
+            >h2 {
+                font: 100 1.2rem "Roboto";
+            }
+        }
+    }
+
+
+    
+.cartItem {
+    grid-template-columns: 2fr 1fr;
+    padding: 0.5rem;
+
+    img {
+        padding: 1rem;
+
+    }
+
+
+}
+}

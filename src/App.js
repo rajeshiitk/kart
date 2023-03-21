@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style/colors.scss";
+import './style/app.scss';
+import './style/home.scss';
+import './style/productCard.scss';
+import { Toaster } from "react-hot-toast";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './components/Home.jsx';
+import Header from './components/Header.jsx';
+import Cart from "./components/Cart";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <Header />
+    <Routes>
+      <Route path="/" element={ <Home />} />
+      <Route path="/cart" element={ <Cart />} />
+    </Routes>
+    <Toaster />
+  </Router>
+
   );
 }
 
